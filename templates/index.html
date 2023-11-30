@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Code Tutor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ask a Question:</h1>
+        <form action="/" method="post">
+            <label for="topic">Topic:</label>
+            <input type="text" id="topic" name="topic" required>
+            <label for="coding_level">Coding Level:</label>
+            <input type="text" id="coding_level" name="coding_level" required>
+            <label for="question">Question:</label>
+            <input type="text" id="question" name="question">
+            <input type="submit" value="Submit">
+        </form>
+        <div class="result">
+            <h2>Code Example:</h2>
+            <p>{{ code_example }}</p>
+        </div>
+        <div class="result">
+            <h2>Explanation:</h2>
+            <p>{{ explanation }}</p>
+        </div>
+        <div class="result">
+            <h2>Answers:</h2>
+            {% for ans in answers %}
+                <p>{{ ans.result }}</p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
