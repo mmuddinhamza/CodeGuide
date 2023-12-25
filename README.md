@@ -1,6 +1,6 @@
-# CodeTutor
+# CodeGuide
 
-CodeTutor is a Flask application that uses the Google GenerativeAI `palm` library to generate code examples and explanations based on a given topic and coding level. It also answers questions about the generated code.
+CodeGuide is a Flask application that uses the Google GenerativeAI `palm` library to generate code examples and explanations based on a given topic and coding level. It also answers questions about the generated code.
 
 ## Features
 
